@@ -64,6 +64,12 @@ const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
   {
+    resolve: `@medusajs/file-local`,
+    options: {
+      upload_dir: "uploads",
+    },
+  },
+  {
     resolve: `medusa-file-s3`,
     options: {
       s3_url: process.env.S3_URL,
