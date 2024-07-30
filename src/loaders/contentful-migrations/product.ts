@@ -35,5 +35,10 @@ export function productMigration(
         },
       ],
     });
+
+  product.createField("medias").name("Medias").type("Array").items({
+    type: "Link",
+    linkType: "Asset",
+  });
   product.createField("medusaId").name("Medusa ID").type("Symbol");
 }
